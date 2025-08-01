@@ -1,4 +1,3 @@
-// Función para cambiar entre vista cuadrícula y lista
 function mostrarVista(vista) {
   const gridView = document.getElementById("gridView");
   const listView = document.getElementById("listView");
@@ -22,22 +21,18 @@ function toggleConfigMenu() {
   menu.classList.toggle("d-none");
 }
 
-// Inicializar modal Bootstrap para nuevo post
 const modal = new bootstrap.Modal(document.getElementById("newPostModal"));
 
-// Mostrar modal al hacer clic en el botón
 document.getElementById("newPostBtn").addEventListener("click", () => {
   modal.show();
 });
 
-// Manejar envío del formulario para añadir nuevo post en la vista lista
 document.getElementById("postForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
   const imageUrl = document.getElementById("imageUrl").value.trim();
   const description = document.getElementById("description").value.trim();
 
-  // Crear nuevo post (card)
   const newPost = document.createElement("div");
   newPost.className = "card mb-4";
 
@@ -52,14 +47,11 @@ document.getElementById("postForm").addEventListener("submit", (e) => {
     </div>
   `;
 
-  // Añadir el post al principio de la lista
   const listView = document.getElementById("listView");
   listView.prepend(newPost);
 
-  // Resetear el formulario y cerrar modal
   e.target.reset();
   modal.hide();
 
-  // Cambiar a vista lista para que el usuario vea el post nuevo
   mostrarVista("list");
 });

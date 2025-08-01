@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Instagram Feed - Proyecto</title>
+  <title>Instagram Photo Feed con Bootstrap</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -19,16 +19,16 @@
       <h1 class="titulo">Instagram</h1>
     </div>
     <div class="header-right">
+      <button id="newPostBtn" class="btn btn-success ms-3">Create a new post</button>
       <div class="config-wrapper">
         <i class="fas fa-cog config-icon" onclick="toggleConfigMenu()"></i>
         <div id="configMenu" class="config-menu d-none">
           <ul>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#">Configuración</a></li>
-            <li><a href="#">Cerrar sesión</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Accesibility</a></li>
+            <li><a href="#">Privacy and Data</a></li>
           </ul>
         </div>
-        <button id="newPostBtn" class="btn btn-success ms-3">Nuevo Post</button>
       </div>
     </div>
   </div>
@@ -41,157 +41,147 @@
           <i class="fas fa-bars"></i>
         </button>
       </div>
-    <!-- Vista Cuadrícula -->
     <div id="gridView" class="grid-container">
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1015/600/400" alt="Foto 1" />
+    <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/6C74/production/_128046772_mediaitem128046768.jpg.webp" alt="Foto 1" />
   </div>
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1016/400/700" alt="Foto 2" />
+    <img src="https://s3.abcstatics.com/media/deportes/2018/07/15/francia-lloris-copa-mundo-k7ZH--1248x698@abc.jpg" alt="Foto 2" />
   </div>
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1018/300/300" alt="Foto 3" />
+    <img src="https://st1.uvnimg.com/c0/6f/23e4d8fc473593f1e33d6844b1c3/gettyimages-452119382.jpg" alt="Foto 3" />
   </div>
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1020/600/600" alt="Foto 4" />
+    <img src="https://images.ecestaticos.com/eCwNav1Ir31FV3LdAiYMry8Kjrk=/0x0:2272x1299/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F0e1%2F1c2%2Fdc2%2F0e11c2dc274f435deab205a34183fa72.jpg" alt="Foto 4" />
   </div>
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1024/600/400" alt="Foto 5" />
+    <img src="https://img2.rtve.es/v/735213/?w=1600" alt="Foto 5" />
   </div>
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1027/400/400" alt="Foto 6" />
+    <img src="https://d31u1w5651ly23.cloudfront.net/articulos/articulos-373064.jpg" alt="Foto 6" />
   </div>
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1033/600/600" alt="Foto 7" />
+    <img src="https://www.kodromagazine.com/wp-content/uploads/2023/02/EYWTMHWKTJDPPJT7B4TLXWO4QQ-scaled.jpg" alt="Foto 7" />
   </div>
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1035/600/400" alt="Foto 8" />
+    <img src="https://estaticos-cdn.prensaiberica.es/clip/c3ef33e8-17ed-489d-8466-f25434888614_source-aspect-ratio_default_0.jpg" alt="Foto 8" />
   </div>
   <div class="cuadro-img">
-    <img src="https://picsum.photos/id/1039/400/600" alt="Foto 9" />
+    <img src="https://www.ole.com.ar/2020/06/09/4RDHUn8be_720x0__1.jpg" alt="Foto 9" />
   </div>
 </div>
-
-<!-- Vista Lista -->
 <div id="listView" class="d-none">
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario1</strong></span>
-      <span>Hace 1 hora</span>
+      <span><strong>Argentina 2022</strong></span>
+      <span>07/07</span>
     </div>
-    <img src="https://picsum.photos/id/1015/600/400" class="card-img-top" alt="Foto 1" />
+    <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/6C74/production/_128046772_mediaitem128046768.jpg.webp" class="card-img-top" alt="Foto 1" />
     <div class="card-body">
-      <p class="card-text">Foto hermosa del paisaje.</p>
+      <p class="card-text">Leo Messi levantando la copa del mundo</p>
     </div>
   </div>
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario2</strong></span>
-      <span>Hace 2 horas</span>
+      <span><strong>Francia 2018</strong></span>
+      <span>01/07</span>
     </div>
-    <img src="https://picsum.photos/id/1016/400/700" class="card-img-top" alt="Foto 2" />
+    <img src="https://s3.abcstatics.com/media/deportes/2018/07/15/francia-lloris-copa-mundo-k7ZH--1248x698@abc.jpg" class="card-img-top" alt="Foto 2" />
     <div class="card-body">
-      <p class="card-text">Atardecer impresionante.</p>
+      <p class="card-text">Hugo Lloris levantando la copa del mundo</p>
     </div>
   </div>
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario3</strong></span>
-      <span>Hace 3 horas</span>
+      <span><strong>Alemania 2014</strong></span>
+      <span>15/07</span>
     </div>
-    <img src="https://picsum.photos/id/1018/300/300" class="card-img-top" alt="Foto 3" />
+    <img src="https://st1.uvnimg.com/c0/6f/23e4d8fc473593f1e33d6844b1c3/gettyimages-452119382.jpg" class="card-img-top" alt="Foto 3" />
     <div class="card-body">
-      <p class="card-text">Momento especial capturado.</p>
+      <p class="card-text">Manuel Neuer levantando la copa del mundo</p>
     </div>
   </div>
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario4</strong></span>
-      <span>Hace 4 horas</span>
+      <span><strong>España 2010</strong></span>
+      <span>13/07</span>
     </div>
-    <img src="https://picsum.photos/id/1020/600/600" class="card-img-top" alt="Foto 4" />
+    <img src="https://images.ecestaticos.com/eCwNav1Ir31FV3LdAiYMry8Kjrk=/0x0:2272x1299/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F0e1%2F1c2%2Fdc2%2F0e11c2dc274f435deab205a34183fa72.jpg" class="card-img-top" alt="Foto 4" />
     <div class="card-body">
-      <p class="card-text">Día soleado en la ciudad.</p>
+      <p class="card-text">Iker Casillas levantando la copa del mundo</p>
     </div>
   </div>
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario5</strong></span>
-      <span>Hace 5 horas</span>
+      <span><strong>Italia 2006</strong></span>
+      <span>Hace 05/07</span>
     </div>
-    <img src="https://picsum.photos/id/1024/600/400" class="card-img-top" alt="Foto 5" />
+    <img src="https://img2.rtve.es/v/735213/?w=1600" class="card-img-top" alt="Foto 5" />
     <div class="card-body">
-      <p class="card-text">Paisaje natural espectacular.</p>
+      <p class="card-text">Fabio Cannavaro levantando la copa del mundo</p>
     </div>
   </div>
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario6</strong></span>
-      <span>Hace 6 horas</span>
+      <span><strong>Brasil 2002</strong></span>
+      <span>10/07</span>
     </div>
-    <img src="https://picsum.photos/id/1027/400/400" class="card-img-top" alt="Foto 6" />
+    <img src="https://d31u1w5651ly23.cloudfront.net/articulos/articulos-373064.jpg" class="card-img-top" alt="Foto 6" />
     <div class="card-body">
-      <p class="card-text">Momento de relax.</p>
+      <p class="card-text">Rivaldo levantando la copa del mundo</p>
     </div>
   </div>
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario7</strong></span>
-      <span>Hace 7 horas</span>
+      <span><strong>Francia 1998</strong></span>
+      <span>01/07</span>
     </div>
-    <img src="https://picsum.photos/id/1033/600/600" class="card-img-top" alt="Foto 7" />
+    <img src="https://www.kodromagazine.com/wp-content/uploads/2023/02/EYWTMHWKTJDPPJT7B4TLXWO4QQ-scaled.jpg" class="card-img-top" alt="Foto 7" />
     <div class="card-body">
-      <p class="card-text">Atardecer en la playa.</p>
+      <p class="card-text">Zinedine Zidane levantando la copa del mundo</p>
     </div>
   </div>
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario8</strong></span>
-      <span>Hace 8 horas</span>
+      <span><strong>Brasil 1994</strong></span>
+      <span>31/06</span>
     </div>
-    <img src="https://picsum.photos/id/1035/600/400" class="card-img-top" alt="Foto 8" />
+    <img src="https://estaticos-cdn.prensaiberica.es/clip/c3ef33e8-17ed-489d-8466-f25434888614_source-aspect-ratio_default_0.jpg" class="card-img-top" alt="Foto 8" />
     <div class="card-body">
-      <p class="card-text">Paisaje urbano nocturno.</p>
+      <p class="card-text">Dunga con la copa del mundo</p>
     </div>
   </div>
   <div class="card mb-4">
     <div class="card-header d-flex justify-content-between">
-      <span><strong>Usuario9</strong></span>
-      <span>Hace 9 horas</span>
+      <span><strong>Alemania 1990</strong></span>
+      <span>08/07</span>
     </div>
-    <img src="https://picsum.photos/id/1039/400/600" class="card-img-top" alt="Foto 9" />
+    <img src="https://www.ole.com.ar/2020/06/09/4RDHUn8be_720x0__1.jpg" class="card-img-top" alt="Foto 9" />
     <div class="card-body">
-      <p class="card-text">Caminata en la montaña.</p>
+      <p class="card-text">Lothar Matthaus con la copa del mundo</p>
     </div>
   </div>
 </div>
-
-  <!-- Modal para Nuevo Post -->
   <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostLabel" aria-hidden="true">
     <div class="modal-dialog">
       <form id="postForm" class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="newPostLabel">Nuevo Post</h5>
+          <h5 class="modal-title" id="newPostLabel">Create a new post</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
           <div class="mb-3">
-            <label for="imageUrl" class="form-label">URL de la imagen</label>
-            <input type="url" class="form-control" id="imageUrl" required placeholder="https://..." />
-          </div>
-          <div class="mb-3">
-            <label for="description" class="form-label">Descripción</label>
-            <textarea class="form-control" id="description" rows="3" placeholder="Escribe una descripción..." required></textarea>
+            <label for="description" class="form-label">Caption:</label>
+            <textarea class="form-control" id="description" rows="3" placeholder="Add the caption of your post here" required></textarea>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Publicar</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Publish</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </form>
     </div>
   </div>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
