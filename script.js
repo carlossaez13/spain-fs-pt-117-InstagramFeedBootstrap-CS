@@ -2,6 +2,7 @@
 function mostrarVista(vista) {
   const gridView = document.getElementById("gridView");
   const listView = document.getElementById("listView");
+  const botones = document.querySelectorAll(".botones-vista button");
 
   if (vista === "grid") {
     gridView.classList.remove("d-none");
@@ -10,6 +11,15 @@ function mostrarVista(vista) {
     listView.classList.remove("d-none");
     gridView.classList.add("d-none");
   }
+  botones.forEach((btn) => btn.classList.remove("active"));
+  document
+    .querySelector(`.botones-vista button[onclick="mostrarVista('${vista}')"]`)
+    .classList.add("active");
+}
+
+function toggleConfigMenu() {
+  const menu = document.getElementById("configMenu");
+  menu.classList.toggle("d-none");
 }
 
 // Inicializar modal Bootstrap para nuevo post

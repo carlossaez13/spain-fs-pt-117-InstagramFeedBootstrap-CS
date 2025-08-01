@@ -12,14 +12,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-
   <div class="container py-4">
-    <header class="d-flex justify-content-between align-items-center mb-4">
-      <div class="header">
-        <img src="https://cdn.pixabay.com/photo/2021/03/06/18/22/logo-6074368_1280.png" alt="Instagram logo" class="instagram-logo" />
-        <h1 class="titulo">Instagram</h1>
+  <div class="header">
+    <div class="header-left">
+      <img src="https://cdn.pixabay.com/photo/2021/03/06/18/22/logo-6074368_1280.png" alt="Instagram logo" class="instagram-logo" />
+      <h1 class="titulo">Instagram</h1>
+    </div>
+    <div class="header-right">
+      <div class="config-wrapper">
+        <i class="fas fa-cog config-icon" onclick="toggleConfigMenu()"></i>
+        <div id="configMenu" class="config-menu d-none">
+          <ul>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Cerrar sesión</a></li>
+          </ul>
+        </div>
+        <button id="newPostBtn" class="btn btn-success ms-3">Nuevo Post</button>
       </div>
-      <div class="botones-vista">
+    </div>
+  </div>
+  </div>
+  <div class="botones-vista">
         <button onclick="mostrarVista('grid')">
           <i class="fas fa-th"></i>
         </button>
@@ -27,11 +41,6 @@
           <i class="fas fa-bars"></i>
         </button>
       </div>
-      <div>
-        <button id="newPostBtn" class="btn btn-success ms-3">Nuevo Post</button>
-      </div>
-    </header>
-
     <!-- Vista Cuadrícula -->
     <div id="gridView" class="grid-container">
   <div class="cuadro-img">

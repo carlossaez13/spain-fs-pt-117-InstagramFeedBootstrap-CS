@@ -1,15 +1,119 @@
+.botones-vista {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.botones-vista button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.botones-vista button:hover {
+  background-color: #f0f0f0;
+}
+
+.botones-vista i {
+  pointer-events: none;
+}
+
+.botones-vista button.active {
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+}
+
 body {
   background-color: #fafafa;
   font-family: Arial, sans-serif;
 }
 
-.botones-vista {
+.header {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20000px 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.instagram-logo {
+  height: 30px;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.config-wrapper {
+  position: relative;
+}
+
+.config-icon {
+  font-size: 22px;
+  cursor: pointer;
+  color: #000;
+}
+
+.config-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.config-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.config-menu ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.config-menu ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+.d-none {
+  display: none;
+}
+
+.newPostBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  font-size: 16px;
+  height: 36px;
+}
 
 /* Estilo para hacer las imágenes en cuadrícula cuadradas y del mismo tamaño */
 .cuadro-img {
@@ -35,8 +139,8 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   width: 100vw;      /* ancho total de la ventana */
-  max-width: 100%;   /* que no exceda el ancho disponible */
-  margin: 0;         /* sin margen para centrar */
+  max-width: 80%;   /* que no exceda el ancho disponible */
+  margin-left: 200px;         /* sin margen para centrar */
   padding: 8px;      /* un poco de padding para que no toque bordes */
   box-sizing: border-box; /* para que padding no aumente ancho total */
 }
@@ -53,23 +157,6 @@ body {
   height: 100%;
   object-fit: cover; /* recorta la imagen para llenar el cuadro */
   display: block;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: black; /* texto en negro */
-  user-select: none;
-  margin-bottom: 20px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-}
-
-.header img {
-  width:50px;
-    height:35px;
 }
 
 
